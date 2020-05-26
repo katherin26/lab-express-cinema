@@ -1,0 +1,16 @@
+.movies-container {
+  width: 100%;
+  margin: 10px;
+}
+
+.movie-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 33%;
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const mongoose = require("mongoose");
+const Movie = require("./models/Movie");
+const MovieSeeds = require("./bin/seeds");
 const logger = require("morgan");
 const path = require("path");
 const cors = require("cors");
@@ -14,6 +16,10 @@ mongoose
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
     );
+    return x.connection.dropDatabase();
+  })
+  .then(() => {
+    return Movie.insertMany(MovieSeeds);
   })
   .catch((err) => {
     console.error("Error connecting to mongo", err);

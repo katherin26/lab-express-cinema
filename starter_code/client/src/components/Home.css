@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-image: url("https://static.timesofisrael.com/blogs/uploads/2019/03/Cinema-popcorn-671104010-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: flex-end;
+}
+
+.banner {
+  width: 50%;
+  max-height: 70%;
+  padding-top: 100px;
+}
+.banner h1 {
+  color: red;
+  font-size: 120px;
+  margin: 30px;
+  line-height: 100px;
+}
+
+.banner a {
+  border: none;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: orange;
+  font-weight: bold;
+  background-color: grey;
+  margin: 30px;
+  text-decoration: none;
+}
